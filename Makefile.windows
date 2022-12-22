@@ -1,0 +1,18 @@
+# Name: Makefile.windows
+# Project: bootloaderJOY
+# Author Francis Gradel, B.Eng. (Retronic Design)
+# Modified Date: 2020-12-22
+# Based on project bootloaderHID from Christian Starkjohann
+# Tabsize: 4
+# Copyright: (c) 2006 by OBJECTIVE DEVELOPMENT Software GmbH
+# License: Proprietary, free under certain conditions. See Documentation.
+
+# You may use this file with
+#   make -f Makefile.windows
+# on Windows with MinGW instead of editing the main Makefile.
+
+include Makefile
+
+USBFLAGS=   -ID:\libusb-win32-bin-1.2.7.1\include
+USBLIBS=    -lhid -lsetupapi -LD:\libusb-win32-bin-1.2.7.1\lib D:\libusb-win32-bin-1.2.7.1\lib\gcc\libusb.a
+EXE_SUFFIX= .exe
